@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Véhicloc{% endblock %}
+{% block hero %}
+    <div class="flex-header">
+        <div>
+            <h1>Location de voitures à Saint-Étienne</h1>
+            <p>Un service de location de voitures au mois pour répondre à vos besoins de mobilité.</p>
+        </div>
+        <div>
+            <img src="{{ asset('img/car.png') }}" alt="Voiture">
+        </div>
+    </div>
+{% endblock %}
+
+{% block body %}
+
+{% include 'main/_cars.html.twig' %}
+{% include 'main/_promise.html.twig' %}
+
+{% endblock %}
+
