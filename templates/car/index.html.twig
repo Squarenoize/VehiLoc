@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Car{% endblock %}
+
+{% block body %}
+<section id="car">
+    <a href="{{ path('app_main') }}">← Retour</a>
+    <h1>{{ car.name }}</h1>
+    
+    <p class="description-car">{{ car.description }}</p>
+    
+    <div class="advantages">
+        <div class="single-advantage"><img src="{{ asset('icons/checked.png') }}" alt="" /> Km illimités</div>
+        <div class="single-advantage"><img src="{{ asset('icons/checked.png') }}" alt="" /> Taxe routière incluse</div>
+        <div class="single-advantage"><img src="{{ asset('icons/checked.png') }}" alt="" /> Assistance dépannage 24/7</div>
+        <div class="single-advantage"><img src="{{ asset('icons/checked.png') }}" alt="" /> Pas de frais caché</div>
+        <div class="single-advantage"><img src="{{ asset('icons/checked.png') }}" alt="" /> Assurance au tiers</div>
+        <div class="single-advantage"><img src="{{ asset('icons/checked.png') }}" alt="" /> Réservation sécurisée</div>
+    </div>
+    
+    <hr>
+    
+    <p class="legal-information">Les conducteurs doivent avoir leur permis de conduire depuis au moins 5 ans.</p>
+    
+    <div class="total-rent">
+        <span>Total</span>
+        <span>{{ car.monthPrice }} €/mois</span>
+    </div>
+    <button class="btn-add">Louer pour {{ car.monthPrice }}€/mois</button> <!-- Bouton inactif -->
+</section>
+
+{% include 'car/_insurances.html.twig' %}
+{% endblock %}
