@@ -70,6 +70,12 @@ a.btn-nav {
     font-size: 14px;
 }
 
+.delete-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
 h1 {
     font-size: 75px;
     color: #F0FC6B;
