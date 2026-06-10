@@ -25,7 +25,7 @@
     <header>
         <nav>
             <a href="{{ path('app_main') }}"><img src="{{ asset('img/logo.png') }}" alt="Vehicloc" /></a>
-            <a href="" class="btn-nav">Ajouter une voiture</a>
+            <a href="{{ path('car_new') }}" class="btn-nav">Ajouter une voiture</a>
         </nav>
         {% block hero %}{% endblock %}
     </header>
